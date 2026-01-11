@@ -4,17 +4,17 @@
 // VIP 회원 : "🌟 VIP {이름}님, 특별한 혜택이 준비되어 있습니다!"
 // 일반 회원 : "안녕하세요, {이름}님! 즐거운 쇼핑 되세요."
 
-function 환영메세지생성(회원등급, 회원이름) {
+function welcomeMessage(memberGrade, name) {
   const message = {
-    VIP회원 : '🌟 VIP ' + 회원이름 + '님, 특별한 혜택이 준비되어 있습니다!',
-    일반회원 : '안녕하세요, ' + 회원이름 + '님! 즐거운 쇼핑 되세요.'
+    VIP회원 : '🌟 VIP ' + name + '님, 특별한 혜택이 준비되어 있습니다!',
+    일반회원 : '안녕하세요, ' + name + '님! 즐거운 쇼핑 되세요.'
   }
 
-return message [회원등급]
+return message [memberGrade]
 }
 
-console.log(환영메세지생성('VIP회원', '유영'))
-console.log(환영메세지생성('일반회원', '일반회원'))
+console.log(welcomeMessage('VIP회원', '유영'))
+console.log(welcomeMessage('일반회원', '일반회원'))
 
 
 
@@ -48,7 +48,21 @@ console.log(환영메세지생성('일반회원', '일반회원'))
 // - 일반 : 결제 금액의 0.5%
 // [예] VIP 회원이 100,000원 결제 시 → 5,000 포인트 적립
 
+function calculateRewardPoints(memberGrade, paymentAmount) {
+  const pointRate = {
+    VIP: 0.05,
+    GOLD: 0.03,
+    SILVER: 0.01,
+    BASIC: 0.005
+  }
 
+  // 적립포인트 = 결제 금액 * 포인트 적립률
+  const rewardPoints = paymentAmount * pointRate[memberGrade]
+
+  return parseInt(rewardPoints)
+}
+
+console.log(calculateRewardPoints('VIP', 100_000))
 
 
 // 5. 영화 티켓 가격 계산
