@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>추천 게임 캐러셀</title>
+    <link rel="stylesheet" href="/4주차 과제/style.css" />
+
+    <!-- js 파일 링크 잊지 말 것 -->
+    <!-- <script type="module" src=""></script> -->
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="recommend" aria-label="추천 게임">
+        <header class="recommend-header">
+          <!-- CSS > hover, focus 스타일 넣기 -->
+          <a class="recommend-title" href="#"
+            >추천 게임
+            <span aria-hidden="true"> > </span>
+          </a>
+        </header>
+
+        <div class="carousel" data-carousel>
+          <!-- 크루노 오디세이 -->
+          <div class="chrono odyssey">
+            <img src="./asset/img/크로노오디세이_배경.png" alt="" />
+            <img src="./asset/img/크로노오디세이_캐릭터.png" alt="" />
+          </div>
+
+          <div class="game-info">
+            <h3 class="game-title">크로노 오디세이</h3>
+            <p class="game-detail">멈춰 있던 시간이 흐른다</p>
+            <p class="game-tag">MMORPG</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
