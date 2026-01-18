@@ -4,36 +4,122 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>추천 게임 캐러셀</title>
-    <link rel="stylesheet" href="/4주차 과제/style.css" />
+    <link rel="stylesheet" href="./style.css" />
 
     <!-- js 파일 링크 잊지 말 것 -->
-    <!-- <script type="module" src=""></script> -->
   </head>
   <body>
     <main class="wrap">
       <section class="recommend" aria-label="추천 게임">
         <header class="recommend-header">
           <!-- CSS > hover, focus 스타일 넣기 -->
-          <a class="recommend-title" href="#"
-            >추천 게임
-            <span aria-hidden="true"> > </span>
-          </a>
+          <img src="./asset/img/게임_아이콘.png" alt="" />
+          <button type="button" class="recommend-title">추천 게임 <span aria-hidden="true">></span></button>
         </header>
 
         <div class="carousel" data-carousel>
-          <!-- 크루노 오디세이 -->
-          <div class="chrono odyssey">
-            <img src="./asset/img/크로노오디세이_배경.png" alt="" />
-            <img src="./asset/img/크로노오디세이_캐릭터.png" alt="" />
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <!-- slide 1 -->
+              <div class="carousel-slide">
+                <article class="game-card chrono-odyssey">
+                  <div class="thumb">
+                    <img src="./asset/img/크로노오디세이_배경.png" alt="" />
+                    <img src="./asset/img/크로노오디세이_캐릭터.png" alt="" />
+                  </div>
+
+                  <div class="game-info">
+                    <h3 class="game-title">크로노 오디세이</h3>
+                    <p class="game-detail">멈춰 있던 시간이 흐른다</p>
+                    <p class="game-tag">MMORPG</p>
+                  </div>
+                </article>
+
+                <article class="game-card archeage-war">
+                  <div class="thumb">
+                    <img src="./asset/img/아케이지워_배경.png" alt="" />
+                    <img src="./asset/img/아케이지워_캐릭터.png" alt="" />
+                  </div>
+
+                  <div class="game-info">
+                    <h3 class="game-title">아케이지 워</h3>
+                    <p class="game-detail">시대의 전설을 향해</p>
+                    <p class="game-tag">MMORPG</p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- slide 2 -->
+              <div class="carousel-slide">
+                <article class="game-card path-of-exile-2">
+                  <div class="thumb">
+                    <img src="./asset/img/패스오브엑자일_배경.png" alt="" />
+                    <img src="./asset/img/패스오브엑자일_캐릭터.png" alt="" />
+                  </div>
+
+                  <div class="game-info">
+                    <h3 class="game-title">패스 오브 엑자일 2</h3>
+                    <p class="game-detail">얼리 액세스 오픈!</p>
+                    <p class="game-tag">핵앤슬래시</p>
+                  </div>
+                </article>
+
+                <article class="game-card odin">
+                  <div class="thumb">
+                    <img src="./asset/img/오딘_배경.png" alt="" />
+                    <img src="./asset/img/오딘_캐릭터.png" alt="" />
+                  </div>
+
+                  <div class="game-info">
+                    <h3 class="game-title">오딘:발할라 라이징</h3>
+                    <p class="game-detail">신의 영역을 차지하라</p>
+                    <p class="game-tag">MMORPG</p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- slide 3 -->
+              <div class="carousel-slide">
+                <article class="game-card rom">
+                  <div class="thumb">
+                    <img src="./asset/img/롬_배경.png" alt="" />
+                    <img src="./asset/img/롬_캐릭터.png" alt="" />
+                  </div>
+
+                  <div class="game-info">
+                    <h3 class="game-title">롬:리멤버 오브 마제스티</h3>
+                    <p class="game-detail">세계는 하나의 전장이 된다</p>
+                    <p class="game-tag">MMORPG</p>
+                  </div>
+                </article>
+
+                <article class="game-card battlegrounds">
+                  <div class="thumb">
+                    <img src="./asset/img/배틀그라운드_배경.png" alt="" />
+                    <img src="./asset/img/배틀그라운드_캐릭터.png" alt="" />
+                  </div>
+
+                  <div class="game-info">
+                    <h3 class="game-title">배틀그라운드</h3>
+                    <p class="game-detail">최후까지 생존하라!</p>
+                    <p class="game-tag">배틀로얄</p>
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
 
-          <div class="game-info">
-            <h3 class="game-title">크로노 오디세이</h3>
-            <p class="game-detail">멈춰 있던 시간이 흐른다</p>
-            <p class="game-tag">MMORPG</p>
+          <!-- 하단 페이지 표시 -->
+          <div class="carousel-indicator">
+            <button type="button" class="before" aria-label="이전">‹</button>
+            <span class="current" data-current>1</span>
+            <span class="slash">/</span>
+            <span class="total" data-total>3</span>
+            <button type="button" class="next" aria-label="다음">›</button>
           </div>
         </div>
       </section>
     </main>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
